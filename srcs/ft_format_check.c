@@ -6,16 +6,20 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:22:11 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 12:27:23 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/23 13:58:58 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	ft_format_check(char *map_file, char *file_extension)
+// This function checks whether the file format of map
+// is equal to .ber file format.
+int	ft_format_check(char *map_file)
 {
 	int	i;
-
+	char *file_extension;
+	
+	file_extension = ".ber";
 	i = 0;
 	while (ft_strlen(map_file) != 4 && map_file)
 		map_file++;
