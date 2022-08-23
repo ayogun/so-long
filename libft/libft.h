@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 13:44:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/05 14:25:47 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:08:17 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -71,5 +72,21 @@ void	ft_putnbr_fd(int n, int fd);
 char	*ft_sub(char **ost, char **line);
 char	*ft_sub_2(char **ost, char **line, char **buf);
 char	*get_next_line(int fd);
+int		ft_printf(const char *format, ...);
+int		ft_formats(va_list *args, const char format);
+int		ft_printchar(int c);
+int		ft_printstr(char *str);
+int		ft_print_ptr(uintptr_t ptr);
+int		ft_printnbr(int n);
+int		ft_print_unsigned(unsigned int n);
+int		ft_print_hex(unsigned int num, const char format);
+int		ft_printpercent(void);
+void	ft_putstr(char *str);
+void	ft_put_ptr(uintptr_t num);
+int		ft_ptr_len(uintptr_t num);
+char	*ft_uitoa(unsigned int n);
+int		ft_num_len(unsigned	int num);
+void	ft_put_hex(unsigned int num, const char format);
+int		ft_hex_len(unsigned	int num);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 17:53:59 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 14:38:13 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:21:28 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef struct s_game {
 
 void	ft_img_render(t_game *map);
 void	ft_map_render(t_game *map, int i);
-void	ft_game(t_game *map);
+void	ft_action(t_game *map);
 void	ft_error(char *str, t_game *game);
 int		ft_format_check(char *map_file);
 void	ft_init_values(t_game *game);

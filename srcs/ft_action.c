@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:14:47 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 14:15:49 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:21:14 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	ft_map_render(t_game *map, int i)
 	}
 }
 
-void	ft_game(t_game *map)
+void	ft_action(t_game *map)
 {
 	map->mlx = mlx_init();
 	map->win = mlx_new_window(map->mlx,
