@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:19:37 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 14:21:42 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/23 20:04:17 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,10 @@ void	ft_akey(t_game *map)
 	}
 }
 
+// This function detects which button was pressed by the user.
+// 53 keycode = ESC
+// 13 keycode = W
+// And as you can understand, rest of them are 'S', 'D' and 'A'.
 int	ft_key_hook(int keycode, t_game *map)
 {
 	if (keycode == 53)
