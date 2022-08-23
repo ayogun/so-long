@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 17:53:05 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 12:07:25 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/23 12:08:29 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/23 12:15:47 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	main(int argc, char **argv)
+void	ft_error(char *str, t_game *game)
 {
-	t_game	game;
-	ft_init_values(&game);
-	if (argc == 2)
-	{
-		start_game(argv[1],&game);
-	}
-	printf("Error");
-	return (0);
+	if (game->mapall)
+		free(game->mapall);
+	write(1, "Error\n", 6);
+	ft_putstr_fd(str, 1);
+	exit(EXIT_FAILURE);
 }
