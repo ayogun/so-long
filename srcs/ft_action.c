@@ -6,12 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:14:47 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 20:05:09 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/25 15:57:26 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
+// This function renders the images one by one and stops the game if
+// one of the images has been missing.
 void	ft_img_render(t_game *map)
 {
 	int	i;
