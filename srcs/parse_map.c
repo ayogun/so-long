@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:28:52 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/25 17:04:57 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 11:56:39 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // More than traditional strjoin function, here this 
 // function do additional null check and close the game
 // if there is an error eccoured.
-char	*ft_strjoin2(char *s1, char *s2)
+char	*ft_strjoin_sub(char *s1, char *s2)
 {
 	char	*new;
 	char	*tmp;
@@ -92,7 +92,7 @@ int	ft_check_line(t_game *map, char **line, int fd)
 	}
 	i = i + ft_check_line_sub(map, line, i);
 	tmp = map->mapall;
-	map->mapall = ft_strjoin2(tmp, *line);
+	map->mapall = ft_strjoin_sub(tmp, *line);
 	free(tmp);
 	free(*line);
 	if (i != map->width && map->width != 0)

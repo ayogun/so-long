@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 14:29:08 by yogun             #+#    #+#              #
-#    Updated: 2022/08/23 16:29:21 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/26 11:52:10 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,13 @@ SRC =	./srcs/ft_action.c \
 		./srcs/ft_error.c \
 		./srcs/ft_format_check.c \
 		./srcs/ft_init_values.c \
-		./srcs/key_hooks.c \
+		./srcs/key_hook.c \
 		./srcs/parse_map.c \
 		./srcs/so_long.c \
 		./srcs/start_game.c \
-		./srcs/utils.c
+		./srcs/utils.c \
+		./srcs/render.c \
+		./srcs/keys_wasd.c
 
 
 OBJ = ${SRC:.c=.o}

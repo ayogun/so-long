@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_hooks.c                                        :+:      :+:    :+:   */
+/*   keys_wasd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 14:19:37 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 11:03:13 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/26 11:49:29 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/26 11:55:09 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,27 +122,4 @@ void	ft_akey(t_game *map)
 		map->steps++;
 		ft_printf("Moves: %i\n", map->steps);
 	}
-}
-
-// This function detects which button was pressed by the user.
-// 53 keycode = ESC
-// 13 keycode = W
-// And as you can understand, rest of them are 'S', 'D' and 'A'.
-int	ft_key_hook(int keycode, t_game *map)
-{
-	if (keycode == 53)
-		map->gameover++;
-	else if (keycode == 13)
-		ft_wkey(map);
-	else if (keycode == 1)
-		ft_skey(map);
-	else if (keycode == 2)
-		ft_dkey(map);
-	else if (keycode == 0)
-		ft_akey(map);
-	if (map->gameover > 0)
-		ft_close(map);
-	mlx_clear_window(map->mlx, map->win);
-	ft_map_render(map, 0);
-	return (0);
 }

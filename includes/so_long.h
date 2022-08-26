@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 17:53:59 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 16:21:28 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 11:56:56 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_skey(t_game *map);
 void	ft_dkey(t_game *map);
 void	ft_akey(t_game *map);
 int		ft_key_hook(int keycode, t_game *map);
-char	*ft_strjoin2(char *s1, char *s2);
+char	*ft_strjoin_sub(char *s1, char *s2);
 void	ft_check_map(t_game *map);
 int		ft_check_line_sub(t_game *map, char **line, int i);
 int		ft_check_line(t_game *map, char **line, int fd);
