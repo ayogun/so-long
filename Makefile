@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 14:29:08 by yogun             #+#    #+#              #
-#    Updated: 2022/08/26 11:52:10 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/26 14:51:04 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,12 +32,26 @@ SRC =	./srcs/ft_action.c \
 		./srcs/parse_map.c \
 		./srcs/so_long.c \
 		./srcs/start_game.c \
-		./srcs/utils.c \
+		./srcs/so_long_utils.c \
 		./srcs/render.c \
 		./srcs/keys_wasd.c
 
+BNS =	bonus/bonus_so_long.c \
+		bonus/parse_map.c \
+		bonus/bonus_game.c \
+		bonus/bonus_so_long_utils.c \
+		bonus/key_hook.c \
+		bonus/enemy_utils.c \
+		bonus/ft_init_values.c \
+		bonus/start_game.c \
+		bonus/ft_action.c \
+		bonus/keys_wasd.c \
+		bonus/ft_format_check.c \
+		bonus/ft_error.c \
+		bonus/render.c
 
 OBJ = ${SRC:.c=.o}
+BOBJ = ${BNS:.c=.o}
 INLIBFT = -L./libft -lft
 INMLX = -L./mlx -lmlx
 
@@ -49,15 +63,20 @@ ${NAME}: ${OBJ}
 	@make -C $(MLXDIR)
 	${CC} ${OBJ} ${INLIBFT} ${INMLX} -framework OpenGL -framework AppKit -o ${NAME}
 
+bonus: ${BOBJ}
+	@make -C $(LIBFTDIR)
+	@make -C $(MLXDIR)
+	${CC} ${BOBJ} ${INLIBFT} ${INMLX} -framework OpenGL -framework AppKit -o ${BONUS} 
+
 all: ${NAME}
 
 clean:
-	${RM} ${OBJ} 
+	${RM} ${OBJ} ${BOBJ}
 	@cd $(LIBFTDIR) && $(MAKE) clean
 	@cd $(MLXDIR) && $(MAKE) clean
 
 fclean: clean
-	${RM} ${NAME}
+	${RM} ${NAME} ${BONUS}
 	@cd $(LIBFTDIR) && $(MAKE) fclean
 
 re: fclean all

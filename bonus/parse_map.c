@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus_map_process.c                                :+:      :+:    :+:   */
+/*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 12:07:41 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 12:07:43 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 14:20:50 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
-char	*ft_strjoin2(char *s1, char *s2)
+char	*ft_strjoin_sub(char *s1, char *s2)
 {
 	char	*new;
 	char	*tmp;
@@ -83,7 +83,7 @@ int	ft_check_line(t_game *map, char **line, int fd)
 	}
 	i = i + ft_check_line_sub(map, line, i);
 	tmp = map->mapall;
-	map->mapall = ft_strjoin2(tmp, *line);
+	map->mapall = ft_strjoin_sub(tmp, *line);
 	free(tmp);
 	free(*line);
 	if (i != map->width && map->width != 0)
@@ -93,7 +93,7 @@ int	ft_check_line(t_game *map, char **line, int fd)
 	return (i);
 }
 
-void	ft_map_process(int fd, t_game *map)
+void	parse_map(int fd, t_game *map)
 {
 	int		i;
 	char	*line;

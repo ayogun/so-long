@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus_so_long.c                                    :+:      :+:    :+:   */
+/*   key_hook.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 12:07:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:46:42 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/26 12:07:48 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/26 14:23:23 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
-int	main(int argc, char **argv)
+int	ft_key_hook(int keycode, t_game *map)
 {
-	t_game	game;
-
-	ft_init_values(&game);
-	if (argc == 2)
+	if (keycode == 53)
+		ft_close(map);
+	if (map->gameover == 0)
 	{
-		start_game(argv[1],&game);
-	}
-	ft_error("Invalid input!\n", &game);
+		if (keycode == 13)
+			ft_wkey(map);
+		else if (keycode == 1)
+			ft_skey(map);
+		else if (keycode == 2)
+			ft_dkey(map);
+		else if (keycode == 0)
+			ft_akey(map);
+	}		
 	return (0);
 }

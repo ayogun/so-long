@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus_so_long.c                                    :+:      :+:    :+:   */
+/*   ft_action.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 12:07:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:46:42 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/26 13:39:57 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/26 13:46:12 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
-int	main(int argc, char **argv)
+void ft_action(t_game *game)
 {
-	t_game	game;
-
-	ft_init_values(&game);
-	if (argc == 2)
-	{
-		start_game(argv[1],&game);
-	}
-	ft_error("Invalid input!\n", &game);
-	return (0);
+	ft_put_enemy(game);
+	game->mlx = mlx_init();
+	game->win = mlx_new_window(game->mlx,
+			100 * game->width, 100 * game->height, "So_long");
+	ft_img_render(game);
+	mlx_hook(game->win, 17, 0, ft_close, game);
+	mlx_key_hook(game->win, ft_key_hook, game);
+	ft_game(game);
+	mlx_loop_hook(game->mlx, ft_game, game);
+	mlx_loop(game->mlx);
 }

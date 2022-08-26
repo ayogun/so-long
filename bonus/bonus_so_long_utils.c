@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 12:07:35 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 12:07:37 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 14:28:52 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,6 @@ void	ft_free_lst(t_game *map)
 	free(map->mapall);
 	if (map->mlx)
 		free(map->mlx);
-}
-
-void	ft_error(char *s, t_game *map)
-{
-	if (map->mapall)
-		free(map->mapall);
-	write(1, "Error\n", 6);
-	ft_putstr_fd(s, 1);
-	exit(EXIT_FAILURE);
 }
 
 void	ft_gameover(t_game *map)

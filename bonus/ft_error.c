@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus_so_long.c                                    :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 12:07:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:46:42 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/23 12:08:29 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/26 11:04:30 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/bonus_so_long.h"
+#include "../includes/so_long.h"
 
-int	main(int argc, char **argv)
+// This function prints the error and exit the game.
+void	ft_error(char *str, t_game *game)
 {
-	t_game	game;
-
-	ft_init_values(&game);
-	if (argc == 2)
-	{
-		start_game(argv[1],&game);
-	}
-	ft_error("Invalid input!\n", &game);
-	return (0);
+	if (game->mapall)
+		free(game->mapall);
+	write(1, "Error\n", 6);
+	ft_putstr_fd(str, 1);
+	exit(EXIT_FAILURE);
 }

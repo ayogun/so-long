@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus_so_long.c                                    :+:      :+:    :+:   */
+/*   ft_init_values.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 12:07:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:46:42 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/26 13:27:33 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/26 13:46:37 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
-int	main(int argc, char **argv)
+// Thia function initialize the values with NULL.
+void	ft_init_values(t_game *map)
 {
-	t_game	game;
-
-	ft_init_values(&game);
-	if (argc == 2)
-	{
-		start_game(argv[1],&game);
-	}
-	ft_error("Invalid input!\n", &game);
-	return (0);
+	map->mapall = NULL;
+	map->item = NULL;
+	map->player = NULL;
+	map->enemy = NULL;
+	map->width = 0;
+	map->height = 0;
+	map->players = 0;
+	map->gameover = 0;
+	map->steps = 0;
+	map->score = 0;
+	map->max_score = 0;
 }

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus_so_long.c                                    :+:      :+:    :+:   */
+/*   start_game.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 12:07:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:46:42 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/26 13:29:54 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/26 14:09:38 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
-int	main(int argc, char **argv)
+void start_game(char *map, t_game *game)
 {
-	t_game	game;
-
-	ft_init_values(&game);
-	if (argc == 2)
-	{
-		start_game(argv[1],&game);
-	}
-	ft_error("Invalid input!\n", &game);
-	return (0);
+	int fd;
+	
+	if (!ft_format_check(map))
+		ft_error("Wrong map format!\n", game);
+	fd = open(map, O_RDONLY);
+	if (fd == -1)
+		ft_error("No such file or directory!\n", game);
+	parse_map(fd, game);
+	ft_action(game);
 }
