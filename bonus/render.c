@@ -6,12 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 14:32:25 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:36:57 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 14:58:11 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
+// This is the second part of the ft_img_render function
+// Here I only do error handling.
 void	ft_sub_img_render(t_game *map)
 {
 	if (!map->wall || !map->exit || !map->gameov || !map->space
@@ -25,6 +27,9 @@ void	ft_sub_img_render(t_game *map)
 	map->enemy = map->enemy0;
 }
 
+// This function renders the images one by one and stops the game if
+// one of the images has been missing. Because of norm, I've splitted the function two parts.
+// In second part, I did error handling.
 void	ft_img_render(t_game *map)
 {
 	int	i;
@@ -50,6 +55,7 @@ void	ft_img_render(t_game *map)
 	ft_sub_img_render(map);
 }
 
+// This function renders the map as the name indicates.
 void	ft_map_render(t_game *map, int i, int x, int y)
 {
 	void	*s;

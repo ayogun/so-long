@@ -6,12 +6,16 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 14:23:03 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:23:27 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 15:08:11 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
+// This function is triggered when user pushes the 'W' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
+// If player go up on to the Devil, game will be over.
 void	ft_wkey(t_game *map)
 {
 	int	x;
@@ -39,6 +43,10 @@ void	ft_wkey(t_game *map)
 	}
 }
 
+// This function is triggered when user pushes the 'S' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
+// If player go up on to the Devil, game will be over.
 void	ft_skey(t_game *map)
 {
 	int	x;
@@ -66,6 +74,10 @@ void	ft_skey(t_game *map)
 	}
 }
 
+// This function is triggered when user pushes the 'D' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
+// If player go up on to the Devil, game will be over.
 void	ft_dkey(t_game *map)
 {
 	int	i;
@@ -91,6 +103,10 @@ void	ft_dkey(t_game *map)
 	}
 }
 
+// This function is triggered when user pushes the 'A' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
+// If player go up on to the Devil, game will be over.
 void	ft_akey(t_game *map)
 {
 	int	i;

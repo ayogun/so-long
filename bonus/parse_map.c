@@ -6,12 +6,16 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 12:07:41 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:20:50 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 15:00:04 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
+// This function concetanate two strings.
+// More than traditional strjoin function, here this 
+// function do additional null check and close the game
+// if there is an error eccoured.
 char	*ft_strjoin_sub(char *s1, char *s2)
 {
 	char	*new;
@@ -30,6 +34,7 @@ char	*ft_strjoin_sub(char *s1, char *s2)
 	return (new);
 }
 
+// This function checks in general if everything is legal on game
 void	ft_check_map(t_game *map)
 {
 	int	i;
@@ -55,6 +60,8 @@ void	ft_check_map(t_game *map)
 		ft_error("Map will not fit to window!\n", map);
 }
 
+// This is the second part of the ft_check_line function.
+// This part I use to check top and bottom walls at the edge.
 int	ft_check_line_sub(t_game *map, char **line, int i)
 {
 	if ((*line)[i] != '1')
@@ -65,6 +72,8 @@ int	ft_check_line_sub(t_game *map, char **line, int i)
 	return (1);
 }
 
+// This function checks if the map is legal and at the end
+// it checks the width of the map.
 int	ft_check_line(t_game *map, char **line, int fd)
 {
 	int		i;
@@ -93,6 +102,8 @@ int	ft_check_line(t_game *map, char **line, int fd)
 	return (i);
 }
 
+// This function read the map file with GNL.
+// After that it does a bunch of checks if the map is valid.
 void	parse_map(int fd, t_game *map)
 {
 	int		i;
