@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 12:07:54 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 16:54:42 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 16:58:53 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_game(t_game *map)
 		ft_enemy(map);
 	ft_map_render(map, 0, 0, -1);
 	s = ft_itoa(map->steps);
-	mlx_string_put(map->mlx, map->win, 20, 20, 0x00CC5500, s);
+	mlx_string_put(map->mlx, map->win, 40, 40, 0x00CC5500, s);
 	free(s);
 	return (1);
 }
