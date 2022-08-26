@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:14:47 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/25 20:35:48 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 10:56:18 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_img_render(t_game *map)
 	}
 }
 
+// Thia function renders the map as the name indicates.
 void	ft_map_render(t_game *map, int i)
 {
 	int		x;

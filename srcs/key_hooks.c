@@ -6,12 +6,15 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:19:37 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 20:04:17 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 11:03:13 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
+// This function is triggered when user pushes the 'W' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
 void	ft_wkey(t_game *map)
 {
 	int	x;
@@ -38,6 +41,9 @@ void	ft_wkey(t_game *map)
 	}
 }
 
+// This function is triggered when user pushes the 'S' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
 void	ft_skey(t_game *map)
 {
 	int	x;
@@ -64,6 +70,9 @@ void	ft_skey(t_game *map)
 	}
 }
 
+// This function is triggered when user pushes the 'D' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
 void	ft_dkey(t_game *map)
 {
 	int	i;
@@ -88,6 +97,9 @@ void	ft_dkey(t_game *map)
 	}
 }
 
+// This function is triggered when user pushes the 'A' on keyboard.
+// After it is being triggered, it relocates the player and make
+// necessarry checks.If player has been reached the EXIT, it is end of the game.
 void	ft_akey(t_game *map)
 {
 	int	i;

@@ -6,12 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:03:30 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 12:03:53 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 11:04:03 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
+// Thia function initialize the values with NULL.
 void	ft_init_values(t_game *game)
 {
 	game->mapall = NULL;

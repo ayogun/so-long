@@ -6,12 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:08:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 12:15:47 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 11:04:30 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
+// This function prints the error and exit the game.
 void	ft_error(char *str, t_game *game)
 {
 	if (game->mapall)
