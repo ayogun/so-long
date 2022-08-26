@@ -79,7 +79,7 @@ This will compile the executable file `so_long_bonus`, to execute its necessary 
 
 ## Trailer
 
-Here on the top left corner it is visible how the game counts the score.
+Here on the top left corner it is visible how the game counts the score. I know how hard to see it. Anywho, I couldn't find a way to print it out bigger in Minilibx. lol
 
 <center>
 <img src="./img/score.gif">
