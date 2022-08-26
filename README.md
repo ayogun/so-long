@@ -76,3 +76,19 @@ This will compile the executable file `so_long_bonus`, to execute its necessary 
 | `make re`    | Do `fclean` rule and compile the program                |
 
 </br>
+
+## Trailer
+
+Here on the top left corner it is visible how the game counts the score.
+
+<center>
+<img src="./img/score.gif">
+</center>
+
+</br>
+
+Here I try to present how our hero dies when he touches one of the devils.
+
+<center>
+<img src="./img/dead.gif">
+</center>
