@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 14:29:08 by yogun             #+#    #+#              #
-#    Updated: 2022/08/26 14:51:04 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/26 16:24:40 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ SRC =	./srcs/ft_action.c \
 
 BNS =	bonus/bonus_so_long.c \
 		bonus/parse_map.c \
-		bonus/bonus_game.c \
+		bonus/game_loop.c \
 		bonus/bonus_so_long_utils.c \
 		bonus/key_hook.c \
 		bonus/enemy_utils.c \

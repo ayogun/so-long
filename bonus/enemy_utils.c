@@ -6,12 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 14:51:19 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:51:22 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 16:48:32 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
+// This function makes the Devil character up move. According to steps
+// number, it makes one down movement to make his movement more complex.
 void	ft_wenemy(t_game *map, int i)
 {
 	int	x;
@@ -31,6 +33,8 @@ void	ft_wenemy(t_game *map, int i)
 	}
 }
 
+// This function makes the Devil character down move. According to steps
+// number, it makes one left movement to make his movement more complex.
 void	ft_senemy(t_game *map, int i)
 {
 	int	x;
@@ -50,6 +54,8 @@ void	ft_senemy(t_game *map, int i)
 	}
 }
 
+// This function makes the Devil character right move. According to steps
+// number, it makes one up movement to make his movement more complex.
 void	ft_denemy(t_game *map, int i)
 {
 	if (map->steps % 2 != 0)
@@ -66,6 +72,8 @@ void	ft_denemy(t_game *map, int i)
 	}
 }
 
+// This function makes the Devil character left move. According to steps
+// number, it makes one right movement to make his movement more complex.
 void	ft_aenemy(t_game *map, int i)
 {
 	if (map->steps % 2 == 0)
@@ -82,6 +90,7 @@ void	ft_aenemy(t_game *map, int i)
 	}
 }
 
+// This function makes the Devil character moves.
 void	ft_enemy(t_game *map)
 {
 	int	i;

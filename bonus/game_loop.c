@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus_game.c                                       :+:      :+:    :+:   */
+/*   game_loop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 12:07:54 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:37:06 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/26 16:54:42 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bonus_so_long.h"
 
+// This function animates the sprites of Collectable and Devil.
+// At 35th line, it does same thing for the srptie of Player.
 void	ft_loop(t_game *map)
 {
 	map->players++;
@@ -40,6 +42,8 @@ void	ft_loop(t_game *map)
 		map->players = 1;
 }
 
+// This function creates enemy and render the map. After 55th line, it
+// writes the score one the screen.
 int	ft_game(t_game *map)
 {
 	char	*s;
@@ -49,7 +53,7 @@ int	ft_game(t_game *map)
 		ft_enemy(map);
 	ft_map_render(map, 0, 0, -1);
 	s = ft_itoa(map->steps);
-	mlx_string_put(map->mlx, map->win, 20, 20, 0x00FF0000, s);
+	mlx_string_put(map->mlx, map->win, 20, 20, 0x00CC5500, s);
 	free(s);
 	return (1);
 }
