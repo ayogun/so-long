@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:22:11 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/23 13:58:58 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/27 14:37:42 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 // is equal to .ber file format.
 int	ft_format_check(char *map_file)
 {
-	int	i;
-	char *file_extension;
-	
+	int		i;
+	char	*file_extension;
+
 	file_extension = ".ber";
 	i = 0;
 	while (ft_strlen(map_file) != 4 && map_file)
