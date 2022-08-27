@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 17:53:59 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 11:56:56 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/27 14:38:55 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_check_map(t_game *map);
 int		ft_check_line_sub(t_game *map, char **line, int i);
 int		ft_check_line(t_game *map, char **line, int fd);
 void	parse_map(int fd, t_game *game);
-void 	start_game(char *map, t_game *game);
+void	start_game(char *map, t_game *game);
 void	ft_free_lst(t_game *map);
 int		ft_close(t_game *map);
 

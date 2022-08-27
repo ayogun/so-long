@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 12:07:20 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:48:31 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/27 14:39:36 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ void	ft_map_render(t_game *map, int i, int x, int y);
 void	ft_gameover(t_game *map);
 int		ft_close(t_game *map);
 int		ft_key_hook(int keycode, t_game *map);
-void 	ft_action(t_game *game);
+void	ft_action(t_game *game);
 void	ft_init_values(t_game *map);
-void 	start_game(char *map, t_game *game);
+void	start_game(char *map, t_game *game);
 int		ft_format_check(char *map_file);
 void	ft_wkey(t_game *map);
 void	ft_skey(t_game *map);
