@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 14:29:08 by yogun             #+#    #+#              #
-#    Updated: 2022/08/26 16:24:40 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/27 14:26:17 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ BNS =	bonus/bonus_so_long.c \
 		bonus/keys_wasd.c \
 		bonus/ft_format_check.c \
 		bonus/ft_error.c \
-		bonus/render.c
+		bonus/render.c \
+		bonus/enemy_moves.c
 
 OBJ = ${SRC:.c=.o}
 BOBJ = ${BNS:.c=.o}
