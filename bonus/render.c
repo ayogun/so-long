@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 14:32:25 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 14:58:11 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/27 14:48:42 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,31 @@ void	ft_sub_img_render(t_game *map)
 }
 
 // This function renders the images one by one and stops the game if
-// one of the images has been missing. Because of norm, I've splitted the function two parts.
+// one of the images has been missing. 
+// Because of norm, I've splitted the function two parts.
 // In second part, I did error handling.
 void	ft_img_render(t_game *map)
 {
 	int	i;
 
 	i = 100;
-	map->wall = mlx_xpm_file_to_image(map->mlx, "assets/wall.xpm", &i, &i);
-	map->exit = mlx_xpm_file_to_image(map->mlx, "assets/exit.xpm", &i, &i);
-	map->gameov = mlx_xpm_file_to_image(map->mlx, "assets/gameover.xpm", &i, &i);
-	map->space = mlx_xpm_file_to_image(map->mlx, "assets/space.xpm", &i, &i);
-	map->item0 = mlx_xpm_file_to_image(map->mlx, "assets/item.xpm", &i, &i);
-	map->item1 = mlx_xpm_file_to_image(map->mlx, "assets/item1.xpm", &i, &i);
-	map->item2 = mlx_xpm_file_to_image(map->mlx, "assets/item2.xpm", &i, &i);
-	map->player0 = mlx_xpm_file_to_image(map->mlx, "assets/player.xpm", &i, &i);
-	map->player1 = mlx_xpm_file_to_image(map->mlx, "assets/player1.xpm", &i, &i);
-	map->player2 = mlx_xpm_file_to_image(map->mlx, "assets/player2.xpm", &i, &i);
-	map->playerw = mlx_xpm_file_to_image(map->mlx, "assets/playerw.xpm", &i, &i);
-	map->player_s = mlx_xpm_file_to_image(map->mlx, "assets/players.xpm", &i, &i);
-	map->playerd = mlx_xpm_file_to_image(map->mlx, "assets/playerd.xpm", &i, &i);
-	map->playera = mlx_xpm_file_to_image(map->mlx, "assets/playera.xpm", &i, &i);
-	map->enemy0 = mlx_xpm_file_to_image(map->mlx, "assets/enemy.xpm", &i, &i);
-	map->enemy1 = mlx_xpm_file_to_image(map->mlx, "assets/enemy1.xpm", &i, &i);
-	map->enemy2 = mlx_xpm_file_to_image(map->mlx, "assets/enemy2.xpm", &i, &i);
+	map->wall = mlx_xpm_file_to_image(map->mlx, "ast/wall.xpm", &i, &i);
+	map->exit = mlx_xpm_file_to_image(map->mlx, "ast/exit.xpm", &i, &i);
+	map->gameov = mlx_xpm_file_to_image(map->mlx, "ast/gameover.xpm", &i, &i);
+	map->space = mlx_xpm_file_to_image(map->mlx, "ast/space.xpm", &i, &i);
+	map->item0 = mlx_xpm_file_to_image(map->mlx, "ast/item.xpm", &i, &i);
+	map->item1 = mlx_xpm_file_to_image(map->mlx, "ast/item1.xpm", &i, &i);
+	map->item2 = mlx_xpm_file_to_image(map->mlx, "ast/item2.xpm", &i, &i);
+	map->player0 = mlx_xpm_file_to_image(map->mlx, "ast/player.xpm", &i, &i);
+	map->player1 = mlx_xpm_file_to_image(map->mlx, "ast/player1.xpm", &i, &i);
+	map->player2 = mlx_xpm_file_to_image(map->mlx, "ast/player2.xpm", &i, &i);
+	map->playerw = mlx_xpm_file_to_image(map->mlx, "ast/playerw.xpm", &i, &i);
+	map->player_s = mlx_xpm_file_to_image(map->mlx, "ast/players.xpm", &i, &i);
+	map->playerd = mlx_xpm_file_to_image(map->mlx, "ast/playerd.xpm", &i, &i);
+	map->playera = mlx_xpm_file_to_image(map->mlx, "ast/playera.xpm", &i, &i);
+	map->enemy0 = mlx_xpm_file_to_image(map->mlx, "ast/enemy.xpm", &i, &i);
+	map->enemy1 = mlx_xpm_file_to_image(map->mlx, "ast/enemy1.xpm", &i, &i);
+	map->enemy2 = mlx_xpm_file_to_image(map->mlx, "ast/enemy2.xpm", &i, &i);
 	ft_sub_img_render(map);
 }
 

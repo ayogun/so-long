@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 11:51:20 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 11:51:54 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/27 14:49:09 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	ft_img_render(t_game *map)
 	int	i;
 
 	i = 100;
-	map->wall = mlx_xpm_file_to_image(map->mlx, "assets/wall.xpm", &i, &i);
-	map->exit = mlx_xpm_file_to_image(map->mlx, "assets/exit.xpm", &i, &i);
-	map->item = mlx_xpm_file_to_image(map->mlx, "assets/item.xpm", &i, &i);
-	map->player = mlx_xpm_file_to_image(map->mlx, "assets/player.xpm", &i, &i);
-	map->space = mlx_xpm_file_to_image(map->mlx, "assets/space.xpm", &i, &i);
+	map->wall = mlx_xpm_file_to_image(map->mlx, "ast/wall.xpm", &i, &i);
+	map->exit = mlx_xpm_file_to_image(map->mlx, "ast/exit.xpm", &i, &i);
+	map->item = mlx_xpm_file_to_image(map->mlx, "ast/item.xpm", &i, &i);
+	map->player = mlx_xpm_file_to_image(map->mlx, "ast/player.xpm", &i, &i);
+	map->space = mlx_xpm_file_to_image(map->mlx, "ast/space.xpm", &i, &i);
 	if (!map->wall || !map->exit || !map->item || !map->player || !map->space)
 	{
 		free(map->win);

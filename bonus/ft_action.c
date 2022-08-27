@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 13:39:57 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/26 15:08:59 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/27 14:41:03 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 // minilibx has partial support of X11 events and doesn’t support 
 // X11 mask (x_mask argument of mlx_hook is useless, keep it at 0).
 //
-// void mlx_hook(mlx_win_list_t *win_ptr, int x_event, int x_mask, int (*f)(), void *param)
-void ft_action(t_game *game)
+// void mlx_hook(mlx_win_list_t *win_ptr, int x_event, int x_mask, 
+// int (*f)(), void *param)
+void	ft_action(t_game *game)
 {
 	ft_put_enemy(game);
 	game->mlx = mlx_init();
