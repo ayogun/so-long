@@ -5,7 +5,7 @@
 
 <center>
 
-![map](./img/img/solong_badge.png)
+![map](./img/solong_badge.png)
 
 </center>
 
