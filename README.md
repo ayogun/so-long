@@ -3,11 +3,9 @@
 ![](https://img.shields.io/badge/Language-C-blue)
 ![](https://img.shields.io/badge/School-42-black)
 
-<center>
-
-![map](./img/solong_badge.png)
-
-</center>
+<p align="center">
+ <img src="./img/solong.png">
+</p>
 
 </br>
 
