@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/School-42-black)
 
 <p align="center">
- <img src="./img/solong.png">
+ <img src="https://github.com/byaliego/42-project-badges/blob/main/badges/so_long-bonus.png?raw=true">
 </p>
 
 </br>
